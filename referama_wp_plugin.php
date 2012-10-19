@@ -18,9 +18,9 @@ function referama_embed($args){
   ), $args ) );
 
   if ( defined('REFERAMA_DEV')==true ){
-    $referama_host = 'http://localhost:3000/';
+    $referama_host = '//localhost:3000/';
   }else{
-    $referama_host = 'http://www.referama.com/';
+    $referama_host = '//www.referama.com/';
   }
 
   $html ="";
@@ -30,7 +30,7 @@ function referama_embed($args){
       <script type='text/javascript'>
         (function() {
             Referama = {};
-            Referama.host = "//localhost/";
+            Referama.host = "$referama_host";
             var rfm = document.createElement('script'); rfm.type = 'text/javascript'; rfm.async = true;
             rfm.src = Referama.host + "javascripts/rfm_loader.js";
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(rfm);
